@@ -1,0 +1,19 @@
+<div class="d-flex justify-content-center align-items-center flex-column ">
+    <h3>Кнопки</h3>
+    <div [ngSwitch]="count" class="d-flex flex-column">
+        <div class="d-flex justify-content-center align-items-center">
+            <button  (click)="count = 1">Машина</button>
+            <button (click)="count = 2">Корабль</button>
+            <button (click)="count = 3">Самолет</button>
+        </div>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+            <ng-template ngSwitchCase="1" *ngFor="let item of cars "><ul><li>{{item}}</li></ul><div></div></ng-template>
+            <ng-template ngSwitchCase="1"> <img src="https://abs-magazine.ru/photo/big/hjrmn166kvxz.jpg" alt=""></ng-template>
+            <ng-template ngSwitchCase="2" *ngFor="let itom of ship "><ul ><li>{{itom}}</li></ul></ng-template>
+            <ng-template ngSwitchCase="2"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Wonder_of_the_Seas_-_August_2021.png/300px-Wonder_of_the_Seas_-_August_2021.png" alt=""></ng-template>
+            <ng-template ngSwitchCase="3"*ngFor="let itam of airoplane "><ul ><li>{{itam}}</li></ul></ng-template>
+            <ng-template ngSwitchCase="3"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Antonov_An-225_Beltyukov-1.jpg/274px-Antonov_An-225_Beltyukov-1.jpg" alt=""></ng-template>
+            <ng-template ngSwitchDefault></ng-template>
+        </div>
+    </div>
+</div>
